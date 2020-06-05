@@ -12,7 +12,34 @@ const App = () => {
 
   const [ videos, setVideos ] = useState([
    {
-        "mylist": [],
+        "mylist": [
+          {
+            "id": 8,
+            "slug": "tvshow-8",
+            "title": "Stargate Atlantis",
+            "type": "Action",
+            "language": "English",
+            "year": 2012,
+            "contentRating": "16+",
+            "duration": 148,
+            "cover": "http://dummyimage.com/800x600.png/306880/ffffff",
+            "description": "Vestibulum ac est lacinia nisi venenatis tristique",
+            "source": "https://mdstrm.com/video/58333e214ad055d208427db5.mp4"
+          },
+          {
+            "id": 9,
+            "slug": "tvshow-9",
+            "title": "Alien Highway",
+            "type": "Action",
+            "language": "English",
+            "year": 2019,
+            "contentRating": "16+",
+            "duration": 128,
+            "cover": "http://dummyimage.com/800x600.png/604180/ffffff",
+            "description": "Vestibulum ac est lacinia nisi venenatis tristique",
+            "source": "https://mdstrm.com/video/58333e214ad055d208427db5.mp4"
+          },
+        ],
         "trends": [
           {
             "id": 2,
@@ -194,10 +221,9 @@ const App = () => {
         videos[0].mylist.length  > 0 && (
           <Categories title="Mi Lista">
             <Carousel>
-              <CarouselItem />
-              <CarouselItem />
-              <CarouselItem />
-              <CarouselItem />
+              {videos[0].mylist.map(item => 
+                <CarouselItem key={item.id} {...item}/>    
+              )}
             </Carousel>
           </Categories>
         )
@@ -205,17 +231,17 @@ const App = () => {
 
       <Categories title="Tendencias">
         <Carousel>
-        {
-          videos.map(item => 
-              <CarouselItem key={item.id} {...item}/>
-            )
-        }
+        {videos[0].trends.map(item => 
+          <CarouselItem key={item.id} {...item}/>
+        )}
         </Carousel>
       </Categories>
 
       <Categories title="Originales de la plataforma">
         <Carousel> 
-          <CarouselItem />
+          {videos[0].originals.map(item => 
+            <CarouselItem key={item.id} {...item} />
+          )}
         </Carousel>
       </Categories>
 
