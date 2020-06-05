@@ -14,7 +14,7 @@ function App() {
       <Header />
       <Search />
 
-      <Categories>
+      <Categories title="Mi Lista">
         <Carousel>
           <CarouselItem />
           <CarouselItem />
@@ -23,15 +23,15 @@ function App() {
         </Carousel>
       </Categories>
 
-      <Categories>
+      <Categories title="Tendencias">
         <Carousel>
           <CarouselItem />
           <CarouselItem />
         </Carousel>
       </Categories>
 
-      <Categories>
-        <Carousel>
+      <Categories title="Originales de la plataforma">
+        <Carousel> 
           <CarouselItem />
         </Carousel>
       </Categories>
