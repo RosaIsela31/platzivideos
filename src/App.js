@@ -194,10 +194,7 @@ const App = () => {
         videos[0].mylist.length  > 0 && (
           <Categories title="Mi Lista">
             <Carousel>
-              <CarouselItem />
-              <CarouselItem />
-              <CarouselItem />
-              <CarouselItem />
+              <CarouselItem />    
             </Carousel>
           </Categories>
         )
@@ -205,11 +202,9 @@ const App = () => {
 
       <Categories title="Tendencias">
         <Carousel>
-        {
-          videos.map(item => 
-              <CarouselItem key={item.id} {...item}/>
-            )
-        }
+        {videos[0].trends.map(item => 
+          <CarouselItem key={item.id} {...item}/>
+        )}
         </Carousel>
       </Categories>
 
