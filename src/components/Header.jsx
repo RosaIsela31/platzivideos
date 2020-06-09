@@ -1,5 +1,5 @@
 import React from 'react';
-import './Header.css';
+import '../styles/Header.css';
 
 import logo from '../static/logo-platzi-video-BW2.png';
 import userIcon from '../static/user-icon.png';
