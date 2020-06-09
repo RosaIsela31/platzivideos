@@ -8,7 +8,7 @@ import Footer from './components/Footer';
 
 import './App.css';
 
-const App = () => {
+const Home = () => {
 
   const [ videos, setVideos ] = useState([
    {
@@ -250,4 +250,4 @@ const App = () => {
   );
 }
 
-export default App;
+export default Home;

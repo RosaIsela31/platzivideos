@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './CarouselItem.css'
+import '../styles/CarouselItem.css'
 import playIcon from '../static/play-icon.png'
 import plusIcon from '../static/plus-icon.png'
  
