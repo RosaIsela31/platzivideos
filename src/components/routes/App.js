@@ -1,11 +1,17 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
+import Login from '../Login';
 import Home from '../../Home';
+import Register from '../Register';
 
 const App = () => (
   <BrowserRouter>
-    <Route exact path="/" component={Home} />
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <Route exact path="/login" component={Login} />
+      <Route exact path="/register" component={Register} />
+    </Switch>
   </BrowserRouter>
 );
 
