@@ -213,8 +213,7 @@ const Home = () => {
     console.log('videos', videos);
     
   return (    
-    <div >
-      <Header />
+    <>
       <Search />
       
       {
@@ -244,9 +243,7 @@ const Home = () => {
           )}
         </Carousel>
       </Categories>
-
-      <Footer />
-    </div>
+    </>
   );
 }
 
