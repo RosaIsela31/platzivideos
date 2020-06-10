@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import '../styles/Register.css'
 
 const Register = () => (
@@ -8,10 +10,10 @@ const Register = () => (
       <form className="register__container--form">
         <input className="input" type="text" placeholder="Nombre" />
         <input className="input" type="text" placeholder="Correo" />
-        <input className="input" type="password" placeholder="Contraseña" / >
+        <input className="input" type="password" placeholder="Contraseña" />
         <button className="button">Registrarme</button>
       </form>
-      <a href="">Iniciar sesión</a>
+      <Link to="/login">Iniciar sesión</Link>
     </section>
   </section>
 );
