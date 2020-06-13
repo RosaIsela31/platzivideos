@@ -45,7 +45,7 @@ const mapStateToProps = state => {
   return {
     mylist: state.mylist,
     trends: state.trends,
-    originals: state.originals
+    originals: state.originals,
   };
 };
 
