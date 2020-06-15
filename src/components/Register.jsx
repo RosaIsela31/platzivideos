@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { registerRequest } from '../actions';
 
 import '../styles/Register.css'
 
-const Register = () => {
+const Register = props => {
 
   const [form, setValues] = useState({
     email: '',
@@ -21,8 +22,8 @@ const Register = () => {
 
   const handleSubmit = event => {
     event.preventDefault(); 
-    console.log('form', form);
-    
+    props.registerRequest(form);
+    props.history.push('/');    
   }
 
   return (
@@ -60,4 +61,8 @@ const Register = () => {
     </section>
 )};
 
-export default connect(null, null )(Register);
+const mapDispatchToProps = {
+  registerRequest,
+}
+
+export default connect(null, mapDispatchToProps)(Register);
